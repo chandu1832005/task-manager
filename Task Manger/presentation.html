@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Application - Presentation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a2e; color: #fff; }
+        .slide {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            padding: 60px 80px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+        }
+        .slide.active { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .slide h1 { font-size: 3.5em; color: #e94560; margin-bottom: 30px; }
+        .slide h2 { font-size: 2.5em; color: #e94560; margin-bottom: 40px; }
+        .slide p { font-size: 1.4em; line-height: 1.8; max-width: 900px; color: #ccc; }
+        .slide ul { text-align: left; font-size: 1.3em; line-height: 2; color: #ccc; margin-left: 60px; }
+        .slide ul li { margin: 15px 0; }
+        .highlight { color: #e94560; font-weight: bold; }
+        .tech-box {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.2);
+            border: 2px solid #e94560;
+            padding: 20px 40px;
+            margin: 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin-top: 30px;
+        }
+        .module-item {
+            background: rgba(233, 69, 96, 0.15);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #e94560;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            margin-top: 30px;
+        }
+        .feature-item {
+            background: rgba(233, 69, 96, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .author-info { margin-top: 50px; }
+        .author-info p { margin: 10px 0; font-size: 1.3em; }
+        .nav {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        .nav button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            background: #e94560;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .nav button:hover { background: #c73e54; }
+        .slide-counter {
+            position: fixed;
+            bottom: 30px;
+            right: 50px;
+            font-size: 1.2em;
+            color: #888;
+        }
+        .architecture-flow {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            font-size: 1.2em;
+        }
+        .arch-box {
+            background: rgba(233, 69, 96, 0.2);
+            padding: 25px 35px;
+            border-radius: 10px;
+            border: 2px solid #e94560;
+        }
+        .arrow { font-size: 2em; color: #e94560; }
+        .mern-letters {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .mern-letter {
+            width: 80px;
+            height: 80px;
+            background: #e94560;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .demo-list {
+            text-align: left;
+            max-width: 700px;
+            margin-top: 30px;
+        }
+        .demo-list li {
+            background: rgba(233, 69, 96, 0.15);
+            padding: 20px 30px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title Slide -->
+<div class="slide active">
+    <h1>TASK MANAGER APPLICATION</h1>
+    <p style="font-size: 1.8em; color: #fff; margin-bottom: 10px;">FOR PERSONAL PRODUCTIVITY</p>
+    <div class="author-info">
+        <p><span class="highlight">Manikanta</span></p>
+        <p>Computer Science Engineering</p>
+        <p style="color: #e94560; margin-top: 20px;">Internship Project</p>
+    </div>
+</div>
+
+<!-- Slide 2: Problem Statement -->
+<div class="slide">
+    <h2>Problem Statement</h2>
+    <ul>
+        <li>In today's fast-paced world, managing daily tasks efficiently is a major challenge</li>
+        <li>Many people rely on notes or memory, which leads to <span class="highlight">missed deadlines</span> and poor organization</li>
+        <li>Existing task management tools are often complex or lack essential features</li>
+        <li>There is a need for a <span class="highlight">simple and effective</span> solution to manage tasks in an organized way</li>
+    </ul>
+</div>
+
+<!-- Slide 3: Objective -->
+<div class="slide">
+    <h2>Objective</h2>
+    <p>The objective of this project is to design and develop a <span class="highlight">Task Manager Application</span> that helps users organize their daily tasks efficiently.</p>
+    <br><br>
+    <p>The system aims to provide an easy-to-use platform where users can:</p>
+    <ul style="margin-top: 30px;">
+        <li>Create, update, track, and manage tasks</li>
+        <li>Assign proper prioritization</li>
+        <li>Update task status in real-time</li>
+        <li>Ultimately improve <span class="highlight">productivity</span></li>
+    </ul>
+</div>
+
+<!-- Slide 4: Technologies Used -->
+<div class="slide">
+    <h2>Technologies Used</h2>
+    <div class="mern-letters">
+        <div class="mern-letter">M</div>
+        <div class="mern-letter">E</div>
+        <div class="mern-letter">R</div>
+        <div class="mern-letter">N</div>
+    </div>
+    <ul style="margin-top: 40px;">
+        <li><span class="highlight">MongoDB</span> - Database for storing tasks</li>
+        <li><span class="highlight">Express.js</span> - Backend framework</li>
+        <li><span class="highlight">React.js</span> - Frontend user interface</li>
+        <li><span class="highlight">Node.js</span> - Server-side runtime</li>
+    </ul>
+    <p style="margin-top: 40px; color: #e94560; font-size: 1.3em;">This project is built using the MERN stack to ensure scalability and performance.</p>
+</div>
+
+<!-- Slide 5: System Architecture -->
+<div class="slide">
+    <h2>System Architecture</h2>
+    <p style="margin-bottom: 20px;">The application follows a <span class="highlight">Client-Server Architecture</span></p>
+    <div class="architecture-flow">
+        <div class="arch-box">User Interface<br><small>React Frontend</small></div>
+        <div class="arrow">&rarr;</div>
+        <div class="arch-box">API Server<br><small>Node.js + Express</small></div>
+        <div class="arrow">&rarr;</div>
+        <div class="arch-box">Database<br><small>MongoDB</small></div>
+    </div>
+    <ul style="margin-top: 40px;">
+        <li>User interacts with the React frontend</li>
+        <li>Requests are sent to the Node.js + Express backend</li>
+        <li>Backend processes logic and interacts with MongoDB</li>
+        <li>Data is stored/retrieved and sent back to frontend</li>
+    </ul>
+    <p style="color: #e94560; margin-top: 20px;">This ensures smooth data flow and real-time updates.</p>
+</div>
+
+<!-- Slide 6: Modules -->
+<div class="slide">
+    <h2>System Modules</h2>
+    <div class="module-grid">
+        <div class="module-item">
+            <strong>Task Creation Module</strong><br>Add new tasks
+        </div>
+        <div class="module-item">
+            <strong>Task Management Module</strong><br>Edit and delete tasks
+        </div>
+        <div class="module-item">
+            <strong>Task Status Module</strong><br>Track progress (pending, in progress, completed)
+        </div>
+        <div class="module-item">
+            <strong>Priority Module</strong><br>Assign importance levels
+        </div>
+        <div class="module-item">
+            <strong>Data Persistence Module</strong><br>Store and retrieve data
+        </div>
+        <div class="module-item">
+            <strong>Authentication Module</strong><br>User login and registration
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Features -->
+<div class="slide">
+    <h2>Features</h2>
+    <div class="feature-list">
+        <div class="feature-item">Add new tasks</div>
+        <div class="feature-item">Edit existing tasks</div>
+        <div class="feature-item">Delete tasks</div>
+        <div class="feature-item">Update task status</div>
+        <div class="feature-item">Assign priority levels</div>
+        <div class="feature-item">View all tasks in organized format</div>
+    </div>
+</div>
+
+<!-- Slide 8: Screenshots -->
+<div class="slide">
+    <h2>Screenshots</h2>
+    <div class="module-grid">
+        <div class="arch-box" style="padding: 40px;">
+            <strong>Home Page</strong><br><br>
+            <em>[Screenshot]</em>
+        </div>
+        <div class="arch-box" style="padding: 40px;">
+            <strong>Add Task Page</strong><br><br>
+            <em>[Screenshot]</em>
+        </div>
+        <div class="arch-box" style="padding: 40px;">
+            <strong>Task List View</strong><br><br>
+            <em>[Screenshot]</em>
+        </div>
+        <div class="arch-box" style="padding: 40px;">
+            <strong>Kanban Board</strong><br><br>
+            <em>[Screenshot]</em>
+        </div>
+    </div>
+    <p style="margin-top: 30px; color: #888;">Add your project screenshots in the placeholder areas</p>
+</div>
+
+<!-- Slide 9: Demo Explanation -->
+<div class="slide">
+    <h2>Demo Explanation</h2>
+    <p>In the demonstration, the following actions will be shown:</p>
+    <ul class="demo-list">
+        <li>Creating a new task</li>
+        <li>Assigning priority levels</li>
+        <li>Updating task status</li>
+        <li>Editing a task</li>
+        <li>Deleting a task</li>
+    </ul>
+    <p style="margin-top: 30px; color: #e94560;">This demonstrates the complete workflow of the application.</p>
+</div>
+
+<!-- Slide 10: Conclusion -->
+<div class="slide">
+    <h2>Conclusion</h2>
+    <p>The Task Manager Application provides a <span class="highlight">simple and efficient solution</span> for managing daily tasks.</p>
+    <br><br>
+    <ul>
+        <li>Improves productivity by helping users stay <span class="highlight">organized</span> and focused</li>
+        <li>Built using the <span class="highlight">MERN stack</span> for scalability and performance</li>
+        <li>Demonstrates how modern technologies can solve <span class="highlight">real-world problems</span> effectively</li>
+    </ul>
+    <p style="margin-top: 50px; font-size: 1.5em; color: #e94560;">Thank You!</p>
+</div>
+
+<div class="nav">
+    <button onclick="prevSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+</div>
+<div class="slide-counter"><span id="current">1</span> / <span id="total">10</span></div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    document.getElementById('total').textContent = slides.length;
+
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        document.getElementById('current').textContent = currentSlide + 1;
+    }
+
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
+</script>
+
+</body>
+</html>
